@@ -1,5 +1,5 @@
 {
 	"title": "关于本站",
-	"description": "一个基于 Github 的现代化博客系统",
-	"content": "📦网站基于 Github 仓库完全存储，所有内容版本可控\n\n🚀无后端，无 serverless function，纯静态站点\n\n✏️文章通过可视化 UI 直接编辑并提交到 Github 仓库\n\n🔑所有用户都可以编辑，提交需要 Owner 的 Private Key\n\n## 技术栈\n\n- Next.js\n- React\n- TypeScript\n- Tailwind CSS\n- Motion\n- Github API"
+	"description": "个人主页与技术笔记",
+	"content": "这是 Dongxibie 的个人主页，用来放技术笔记、项目和一些零散记录。\n\n## 内容存储\n\n文章、图片和站点配置都存放在我的 GitHub 仓库 `Dongxibie/weida` 里，版本可追溯，无需服务器，不依赖数据库。\n\n## 技术栈\n\n- Next.js / React / TypeScript\n- Tailwind CSS / Motion\n- GitHub API（页面内直接编辑并提交内容）\n\n## 致谢\n\n本站基于开源博客框架 [Weida Blog](https://github.com/YYsuni/2025-blog-public) 搭建，遵循 MIT 许可协议。"
 }
