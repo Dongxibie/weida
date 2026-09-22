@@ -1,5 +1,6 @@
 'use client'
 import { PropsWithChildren } from 'react'
+import { usePathname } from 'next/navigation'
 import { useCenterInit } from '@/hooks/use-center'
 import BlurredBubblesBackground from './backgrounds/blurred-bubbles'
 import NavCard from '@/components/nav-card'
@@ -15,6 +16,8 @@ export default function Layout({ children }: PropsWithChildren) {
 	useSizeInit()
 	const { cardStyles, siteContent, regenerateKey } = useConfigStore()
 	const { maxSM, init } = useSize()
+	const pathname = usePathname()
+	const isHome = pathname === '/'
 
 	const backgroundImages = (siteContent.backgroundImages ?? []) as Array<{ id: string; url: string }>
 	const currentBackgroundImageId = siteContent.currentBackgroundImageId
@@ -54,9 +57,9 @@ export default function Layout({ children }: PropsWithChildren) {
 
 			<main className='relative z-10 h-full'>
 				{children}
-				<NavCard />
+				{!isHome && <NavCard />}
 
-				{!maxSM && cardStyles.musicCard?.enabled !== false && <MusicCard />}
+				{!isHome && !maxSM && cardStyles.musicCard?.enabled !== false && <MusicCard />}
 			</main>
 
 			{maxSM && init && <ScrollTopButton className='bg-brand/20 fixed right-6 bottom-8 z-50 shadow-md' />}
