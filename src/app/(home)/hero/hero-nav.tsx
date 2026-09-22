@@ -7,6 +7,7 @@ import { ArrowRight, Menu, X } from 'lucide-react'
 
 const NAV_LINKS = [
 	{ label: '首页', href: '/' },
+	{ label: '进阶', href: '/#ascension' },
 	{ label: '文章', href: '/blog' },
 	{ label: '项目', href: '/projects' },
 	{ label: '关于', href: '/about' }
