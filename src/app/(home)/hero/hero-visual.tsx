@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react'
 import { Check, FileText, PenLine } from 'lucide-react'
+import Husky from '../ascension/husky'
 
 type Badge = {
 	title: string
@@ -75,18 +76,13 @@ export default function HeroVisual() {
 				<circle cx='310' cy='610' r='3' fill='#60B1FF' />
 			</svg>
 
-			{/* 角色主视觉 */}
+			{/* 角色主视觉：纯代码绘制的哈士奇国王（无位图抠图） */}
 			<motion.div
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
 				className='relative w-full max-w-[600px] select-none'>
-				<img
-					src='/images/husky-king.png'
-					alt='奥地利哈士奇'
-					className='mx-auto block h-auto w-full max-w-[560px]'
-					style={{ filter: 'brightness(1.02) contrast(1.04) drop-shadow(0 24px 48px rgba(0,132,255,0.12))' }}
-				/>
+				<Husky stage={5} className='mx-auto h-[46vh] min-h-[360px] w-auto' />
 			</motion.div>
 
 			{BADGES.map((badge, index) => (
