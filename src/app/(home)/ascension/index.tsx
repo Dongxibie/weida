@@ -75,7 +75,9 @@ const TRANSITION = '800ms cubic-bezier(0.16, 1, 0.3, 1)'
 
 export default function Ascension() {
 	const [active, setActive] = useState(0)
-	const [visible, setVisible] = useState<number[]>([])
+	// 默认让第一阶段可见：即使加载时页面处于不可见状态（IntersectionObserver 回调会被推迟），
+	// 区块也不会呈现为空白
+	const [visible, setVisible] = useState<number[]>([0])
 	const blocksRef = useRef<Array<HTMLDivElement | null>>([])
 
 	useEffect(() => {
